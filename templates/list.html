@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список фильмов - Комедии</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f2f2f2;">
+
+<header style="background-color: #333; color: #fff; text-align: center; padding: 10px 0;">
+    <h1>Список фильмов - Комедии</h1>
+</header>
+
+<nav style="background-color: #444; padding: 10px 0; text-align: center;">
+    <!-- Здесь можно добавить навигационные элементы, если нужно -->
+</nav>
+
+<main style="padding: 20px;">
+
+<section class="movie-list" style="display: flex; flex-wrap: wrap;">
+    <article class="movie" style="width: 200px; margin: 10px; background-color: #fff; border-radius: 5px; padding: 10px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);">
+        {% for movie in movies %}
+            <img src="{{ movie.image.url }}" alt="Название фильма" style="width: 100%; height: auto; border-radius: 5px;">
+            <h2 style="font-size: 18px; margin-top: 10px;">Название фильма: {{ movie.title }}</h2>
+            <p style="font-size: 14px; margin: 5px 0;">Год выпуска: {{ movie.year }}</p>
+            <p style="font-size: 14px; margin: 5px 0;">Рейтинг: {{ movie.star }}</p>
+        {% endfor %}
+        <!-- Другая информация о фильме -->
+    </article>
+    <!-- Другие фильмы -->
+</section>
+
+</main>
+
+<footer style="background-color: #333; color: #fff; text-align: center; padding: 10px 0;">
+    <p>&copy; 2024 Кинопоиск</p>
+</footer>
+
+</body>
+</html>

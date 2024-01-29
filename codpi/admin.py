@@ -1,5 +1,5 @@
 from django.contrib import admin
-from codpi.models import Laptop, Phone,Shop
+from codpi.models import Laptop, Phone,Shop, Customer, Wallet
 
 
 @admin.register(Laptop)
@@ -14,4 +14,9 @@ class PhoneAdmin(admin.ModelAdmin):
 
 @admin.register(Shop)
 class ShopAdmin(admin.ModelAdmin):
-    list_display = ('brand',)
+    list_display = ('id', 'brand',)
+
+
+admin.site.register(Customer)
+admin.site.register(Wallet)
+

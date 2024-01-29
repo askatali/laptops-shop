@@ -1,10 +1,13 @@
 
 from django.contrib import admin
-from django.urls import path
-from codpi.views import index, my_url
+from django.urls import path, include
+from django.conf.urls.static import static
+from config import settings
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', index),
-    path('my_url/', my_url)
+    path('movie/', include('movie.urls')),
 ]
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

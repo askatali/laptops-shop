@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информация о фильме</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Информация о фильме</h1>
+        <p>Название: {{ movie.title }}</p>
+        <p>Описание: {{ movie.description }}</p>
+        <p>Год выпуска: {{ movie.year }}</p>
+        <p>Режиссер: {{ movie.director }}</p>
+        <p>Жанр: {{ movie.genre }}</p>
+        <iframe width="560" height="315" src="{{ movie.youtube_url }}" frameborder="0" allowfullscreen></iframe>
+        <!-- Добавьте другие сведения о фильме, если нужно -->
+    </div>
+</body>
+</html>
