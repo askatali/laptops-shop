@@ -1,9 +1,8 @@
 from django.urls import path
-from movie.views import kino_render, kino_list
+from movie.views import kino_list, kino_detail
 
 
 urlpatterns = [
-    path('detail/<int:pk>/', kino_render, name='html'),
-    path('list/', kino_list, name='list')
+    path('list/', kino_list, name='list'),
+    path('detail/<int:id>/', kino_detail, name='detail')
 ]
-

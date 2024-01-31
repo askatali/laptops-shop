@@ -20,7 +20,7 @@
 <section class="movie-list" style="display: flex; flex-wrap: wrap;">
     <article class="movie" style="width: 200px; margin: 10px; background-color: #fff; border-radius: 5px; padding: 10px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);">
         {% for movie in movies %}
-            <img src="{{ movie.image.url }}" alt="Название фильма" style="width: 100%; height: auto; border-radius: 5px;">
+            <a href="{% url 'detail' movie.id %}"><img src="{{ movie.image.url }}" alt="Название фильма" style="width: 100%; height: auto; border-radius: 5px;"></a>
             <h2 style="font-size: 18px; margin-top: 10px;">Название фильма: {{ movie.title }}</h2>
             <p style="font-size: 14px; margin: 5px 0;">Год выпуска: {{ movie.year }}</p>
             <p style="font-size: 14px; margin: 5px 0;">Рейтинг: {{ movie.star }}</p>

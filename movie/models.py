@@ -11,3 +11,6 @@ class Movie(models.Model):
     image = models.ImageField(upload_to='image/movie/')
     star = models.FloatField(default=0.0)
     youtube_url = models.URLField(blank=True, null=True)
+
+    def __str__(self):
+        return f'{self.title}'
