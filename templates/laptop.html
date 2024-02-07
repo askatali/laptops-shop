@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список Ноутбуков и ПК</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f2f2f2;">
+
+<header style="background-color: #333; color: #fff; text-align: center; padding: 10px 0;">
+    <h1>Список Ноутбуков</h1>
+</header>
+
+<nav style="background-color: #444; padding: 10px 0; text-align: center;">
+    <!-- Здесь можно добавить навигационные элементы, если нужно -->
+</nav>
+
+<main style="padding: 20px;">
+
+<section class="shop-laptop" style="display: flex; flex-wrap: wrap;">
+    <article class="shop" style="width: 200px; margin: 10px; background-color: #fff; border-radius: 5px; padding: 10px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);">
+        {% for laptop in laptops %}
+            <a href="{% url 'laptop' shop.id %}"><img src="{{ shop.image.url }}" alt="Подробнее" style="width: 100%; height: auto; border-radius: 5px;"></a>
+            <h2 style="font-size: 18px; margin-top: 10px;">Название ноутбука: {{ shop.name }}</h2>
+            <p style="font-size: 14px; margin: 5px 0;"> Цена продукта: {{ shop.price }}</p>
+        {% endfor %}
+        <!-- Другая информация о фильме -->
+    </article>
+    <!-- Другие фильмы -->
+</section>
+
+</main>
+
+<footer style="background-color: #333; color: #fff; text-align: center; padding: 10px 0;">
+    <p>LAPTOPS</p>
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
