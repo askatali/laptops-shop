@@ -19,3 +19,10 @@ class ImageSerializer(serializers.ModelSerializer):
         model = Image
         fields = ('id', 'image')
 
+
+class LaptopDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Laptop
+        fields = ('id','name', 'price', 'image', 'description', 'color','state')
+
+
